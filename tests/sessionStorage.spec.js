@@ -17,7 +17,7 @@ test.describe('Session storage', () => {
         webContext = await browser.newContext({ storageState: 'state.json' })
     })
 
-    test.only('Session storage', async () => {
+    test('Session storage', async () => {
         const page = await webContext.newPage();
         await page.goto("http://rahulshettyacademy.com/client")
         const products = page.locator('.card-body')
